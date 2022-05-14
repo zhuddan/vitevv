@@ -1,6 +1,6 @@
 # vue_template_for_vue_cli
 
-## desc
+## Introduction
 `vue3` + `typescript` + `@vue/cli@5` + `pnpm`
 
 
