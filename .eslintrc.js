@@ -9,7 +9,6 @@ module.exports = defineConfig({
   },
   parser: 'vue-eslint-parser',
   plugins: ['simple-import-sort', 'prettier'],
-
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 2020,
@@ -20,6 +19,7 @@ module.exports = defineConfig({
     },
   },
   extends: [
+    './.eslintrc-auto-import.json',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
