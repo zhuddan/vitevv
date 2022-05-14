@@ -13,8 +13,9 @@
     "strictNullChecks":true,
     "sourceMap": true,
     "noImplicitAny":false,
+    "resolveJsonModule":true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types/", "@types/"],
+    "typeRoots": ["./node_modules/@types/", "types"],
     "types": [
       "webpack-env"
     ],
@@ -23,7 +24,7 @@
         "src/*"
       ],
       "#/*": [
-        "@types/*"
+        "types/*"
       ]
     },
     "lib": [
@@ -39,9 +40,9 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "@types/**/*.d.ts",
-    "@types/**/*.ts",
-    "@types/*.ts"
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "types/*.ts"
   ],
   "exclude": [
     "node_modules"

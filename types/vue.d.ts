@@ -4,7 +4,7 @@ declare module '*.vue' {
   export default Component;
 }
 
-declare module 'virtual:*' {
-  const result: any;
-  export default result;
-}
+// declare module 'virtual:*' {
+//   const result: any;
+//   export default result;
+// }
