@@ -1,7 +1,9 @@
-# ps_sys
+# vue_template_for_vue_cli
 
 ## desc
-vue3+ts
+`vue3` + `typescript` + `@vue/cli@5` + `pnpm`
+
+
 ## Project setup
 ```
 pnpm install
