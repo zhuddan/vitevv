@@ -1,0 +1,9 @@
+{
+  "explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json":"package-lock.json,.eslintrc.js,.eslintignore,.eslintcache,prettier.config.js,stylelint.config.js,.stylelintignore,.gitignore,.editorconfig,pnpm-lock.yaml,.browserslistrc",
+		"vue.config.js":"jsconfig.json,README.md,postcss.config.js,babel.config.js",
+    ".env":".env.*",
+	},
+}
