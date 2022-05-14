@@ -1,11 +1,14 @@
 import { createApp } from 'vue';
 
 import App from './App.vue';
-import router from './router';
+import { registerRouter } from './router';
+import { registerStore } from './store';
 
-createApp(App).use(router).mount('#app');
+function init() {
+  const app = createApp(App);
+  registerRouter(app);
+  registerStore(app);
+  app.mount('#app');
+}
 
-//test
-const s: Nullable<string> = 's';
-s;
-s.search;
+init();

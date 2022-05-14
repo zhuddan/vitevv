@@ -1,3 +1,4 @@
+import { App } from 'vue';
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 import HomeView from '../views/Home.vue';
@@ -22,5 +23,10 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
+
+export function registerRouter(app: App) {
+  app.use(router);
+  return app;
+}
 
 export default router;
