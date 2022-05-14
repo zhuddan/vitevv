@@ -1,19 +1,12 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <div> {{ testStore.count }} </div>
+  <HelloWorld />
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-
-  import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-  export default defineComponent({
-    name: 'HomeView',
-    components: {
-      HelloWorld,
-    },
-  });
+<script setup lang="ts">
+  import HelloWorld from '@/components/HelloWorld.vue';
+  import { useTestStore } from '@/store/modules/test';
+  const testStore = useTestStore();
 </script>
+
+<style scoped></style>
