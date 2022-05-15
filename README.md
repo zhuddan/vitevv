@@ -3,7 +3,6 @@
 ## Introduction
 `vue3` + `typescript` + `@vue/cli@5` + `pnpm`
 
-
 ## Project setup
 ```
 pnpm install
