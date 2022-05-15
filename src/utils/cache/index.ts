@@ -13,8 +13,7 @@ function beforeHandleSet(val: any): string {
 
 function afterHandleGet(val: any): string | null | undefined {
   try {
-    const data = JSON.parse(val);
-    return data;
+    return JSON.parse(val);
   } catch (e) {
     if (val === 'null') {
       return null;
