@@ -1,5 +1,6 @@
 <template>
-  <div> {{ testStore.count }} </div>
+  <h1> use pinia</h1>
+  <span> count: {{ testStore.count }} </span><br />
   <HelloWorld />
 </template>
 

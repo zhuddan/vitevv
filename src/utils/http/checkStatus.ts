@@ -1,5 +1,5 @@
 import { useMessage } from '@/hooks/web/useMessage';
-import type { ErrorMessageMode } from '#/axios';
+import type { ErrorMessageMode } from '~/axios';
 // import { useI18n } from '@/hooks/web/useI18n'
 // import router from '@/router';
 // import { PageEnum } from '@/enums/pageEnum';

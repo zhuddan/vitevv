@@ -3,7 +3,7 @@
  */
 import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-import type { RequestOptions, Result } from '#/axios';
+import type { RequestOptions, Result } from '~/axios';
 
 export interface CreateAxiosOptions extends AxiosRequestConfig {
   authenticationScheme?: string;

@@ -1,4 +1,4 @@
-import { GlobConfig } from '#/config';
+import { GlobConfig } from '~/config';
 
 import packageInfo from '../../../package.json';
 

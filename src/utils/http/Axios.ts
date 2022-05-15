@@ -6,7 +6,7 @@ import qs from 'qs';
 import { ContentTypeEnum } from '@/enums/httpEnum';
 import { RequestEnum } from '@/enums/httpEnum';
 import { isFunction } from '@/utils/is';
-import type { RequestOptions, Result, UploadFileParams } from '#/axios';
+import type { RequestOptions, Result, UploadFileParams } from '~/axios';
 
 import { AxiosCanceler } from './axiosCancel';
 import type { CreateAxiosOptions } from './axiosTransform';

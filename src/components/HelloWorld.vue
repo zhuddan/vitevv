@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <button @click="testStore.increase">increase count</button>
-    <button @click="testStore.decrease">decrease count</button>
-  </div>
+  <button @click="testStore.increase">increase</button>
+  <button @click="testStore.decrease">decrease</button>
 </template>
 
 <script setup lang="ts">

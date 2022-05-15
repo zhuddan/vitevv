@@ -14,7 +14,7 @@ import { deepMerge, setObjToUrlParams } from '@/utils';
 import { getToken } from '@/utils/auth';
 // import { AxiosRetry } from '@/utils/http/axios/axiosRetry';
 import { isString } from '@/utils/is';
-import type { RequestOptions, Result } from '#/axios';
+import type { RequestOptions, Result } from '~/axios';
 
 import { VAxios } from './Axios';
 import type { AxiosTransform, CreateAxiosOptions } from './axiosTransform';
