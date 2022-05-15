@@ -20,9 +20,12 @@ export interface RequestOptions {
   errorMessageMode?: ErrorMessageMode;
   // Whether to add a timestamp
   joinTime?: boolean;
+
   ignoreCancelToken?: boolean;
   // Whether to send token in header
   withToken?: boolean;
+
+  tokenKey: string;
 }
 
 export interface Result<T = any> {
