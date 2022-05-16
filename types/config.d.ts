@@ -3,4 +3,5 @@ export interface GlobConfig {
   APP_NAME: string;
   API_BASE_URL: string;
   URL_PREFIX: string;
+  ENV: string;
 }
