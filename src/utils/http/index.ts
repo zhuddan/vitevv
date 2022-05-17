@@ -1,18 +1,13 @@
 // axios配置  可自行根据项目进行更改，只需更改该文件即可，其他文件可以不动
-// The axios configuration can be changed according to the project, just change the file, other files can be left unchanged
 
 import type { AxiosResponse } from 'axios';
 import { clone } from 'lodash-es';
 
 import { ContentTypeEnum, RequestEnum, ResultEnum } from '@/enums/httpEnum';
 import { useGlobSetting } from '@/hooks/setting';
-// import { useI18n } from '@/hooks/web/useI18n';
 import { useMessage } from '@/hooks/web/useMessage';
-// import { useErrorLogStoreWithOut } from '@/store/modules/errorLog';
-// import { useUserStoreWithOut } from '@/store/modules/user';
 import { deepMerge, setObjToUrlParams } from '@/utils';
 import { getToken } from '@/utils/auth';
-// import { AxiosRetry } from '@/utils/http/axios/axiosRetry';
 import { isString } from '@/utils/is';
 import type { RequestOptions, Result } from '~/axios';
 
@@ -32,7 +27,6 @@ const transform: AxiosTransform = {
    * @description: 处理请求数据。如果数据不是预期格式，可直接抛出错误
    */
   transformRequestHook: (res: AxiosResponse<Result>, options: RequestOptions) => {
-    // const { t } = useI18n();
     const { isTransformResponse, isReturnNativeResponse } = options;
     // 是否返回原生响应头 比如：需要获取响应头时使用该属性
     if (isReturnNativeResponse) {
@@ -47,7 +41,6 @@ const transform: AxiosTransform = {
 
     const { data } = res;
     if (!data) {
-      // return '[HTTP] Request has no return value';
       throw new Error('请求出错，请稍候重试');
     }
     //  这里 code，result，message为 后台统一的字段，需要在 types.ts内修改为项目自己的接口返回格式
@@ -65,9 +58,6 @@ const transform: AxiosTransform = {
     switch (code) {
       case ResultEnum.TIMEOUT:
         errorMsg = '登录超时,请重新登录!';
-        // const userStore = useUserStoreWithOut();
-        // userStore.setToken(undefined);
-        // userStore.logout(true);
         break;
       default:
         if (msg) {
@@ -77,8 +67,6 @@ const transform: AxiosTransform = {
         }
     }
 
-    // errorMessageMode=‘modal’的时候会显示modal错误弹窗，而不是消息提示，用于一些比较重要的错误
-    // errorMessageMode='none' 一般是调用时明确表示不希望自动弹出错误提示
     if (options.errorMessageMode === 'modal') {
       modalError(errorMsg);
     } else if (options.errorMessageMode === 'message') {
@@ -102,6 +90,7 @@ const transform: AxiosTransform = {
     const params = config.params || {};
     const data = config.data || false;
     formatDate && data && !isString(data) && formatRequestDate(data);
+
     if (config.method?.toUpperCase() === RequestEnum.GET) {
       if (!isString(params)) {
         // 给 get 请求加上时间戳参数，避免从缓存中拿数据。
@@ -174,7 +163,6 @@ const transform: AxiosTransform = {
       if (err?.includes('Network Error')) {
         errMessage = '网络异常，请检查您的网络连接是否正常!';
       }
-
       if (errMessage) {
         if (errorMessageMode === 'modal') {
           modalError(errMessage);
@@ -187,7 +175,6 @@ const transform: AxiosTransform = {
       throw new Error(error as unknown as string);
     }
     checkStatus(error?.response?.status, msg, errorMessageMode);
-
     return Promise.reject(error);
   },
 };

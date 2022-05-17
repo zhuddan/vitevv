@@ -11,8 +11,6 @@ import type { RequestOptions, Result, UploadFileParams } from '~/axios';
 import { AxiosCanceler } from './axiosCancel';
 import type { CreateAxiosOptions } from './axiosTransform';
 
-export * from './axiosTransform';
-
 /**
  * @description:  axios module
  */
@@ -135,7 +133,6 @@ export class VAxios {
           });
           return;
         }
-
         formData.append(key, params.data![key]);
       });
     }
